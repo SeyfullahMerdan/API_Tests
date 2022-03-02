@@ -18,11 +18,12 @@ public class GetRequest05 {
 			ve Headers’daki “Server” in “cloudflare”
 			ve response body’deki “userId”’nin 7
 			ve “title” in “esse et quis iste est earum aut impedit”
-			ve “completed” bolumunun false oldugunu test edin
+			ve “comp
+			leted” bolumunun false oldugunu test edin
      */
 
     @Test
-    public void test03() {
+    public void test05() {
 
         String url = " https://jsonplaceholder.typicode.com/todos/123";
 
@@ -30,11 +31,13 @@ public class GetRequest05 {
 
         response.prettyPrint();
 
-        response.then().
-                assertThat().
+        response.then().         // assert yapıyoruz, dogruluyoruz
+                assertThat().   // assert yapıyoruz, dogruluyoruz
                 contentType(ContentType.JSON).
                 statusCode(200).
-                header("Server" , Matchers.equalTo("cloudflare")).
+                headers("Server", Matchers.equalTo("cloudflare"), "Pragma",Matchers.equalTo("no-cache")).
+                //header("Pragma",Matchers.equalTo("no-cache")).
+                 // headers yazarak yukarıda birlikte yazabiliriz veya header diyip ayrı ayrıda yazılabilir.
                 body("userId",Matchers.equalTo(7)
                         ,"title",Matchers.equalTo("esse et quis iste est earum aut impedit")
                         ,"completed",Matchers.equalTo(false)
@@ -43,7 +46,8 @@ public class GetRequest05 {
         // Matchers classından kullanmak yerine equalTo() methodunu static olarak da kullanabiliriz.
         // Matchersi silerek, equalTo() methodunu import ederek static kullanılabilir.
 
-
+        // body kısmını header kısmından ayrı şekilde de yazabiliriz. Bunun için bir önceki satırı ; ile kapatıp
+        // response.then.assertThat.body şeklinde diğer satırdan devam etmem lazım.
 
 
 

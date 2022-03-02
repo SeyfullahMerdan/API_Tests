@@ -20,7 +20,7 @@ ve gelen yaslar icinde 21, 61, ve 23 degerlerinden birinin oldugunu test edin.
  */
 
     @Test
-    public void test03() {
+    public void test04() {
 
         String url = "http://dummy.restapiexample.com/api/v1/employees";
 
@@ -39,21 +39,6 @@ ve gelen yaslar icinde 21, 61, ve 23 degerlerinden birinin oldugunu test edin.
             // bir deger aranacaksa = Matchers.hasItem    kullanılır
             // birden fazla deger aranacaksa = Matchers.hasItems  kullanılır
 
+   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 }
