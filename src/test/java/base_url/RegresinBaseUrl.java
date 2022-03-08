@@ -6,10 +6,10 @@ import org.junit.Before;
 
 public class RegresinBaseUrl {
 
-     protected RequestSpecification spec01;
+    protected RequestSpecification spec01;  // interfacedir. Obje üretemiyoruz.
 
     @Before
-    public void setUp(){
+    public void setUp() {
 
         spec01 = new RequestSpecBuilder().setBaseUri("https://reqres.in").build();
 
