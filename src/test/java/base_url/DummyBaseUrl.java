@@ -11,14 +11,8 @@ public class DummyBaseUrl {
 
     @Before
     public void setUp(){
-
         spec02 = new RequestSpecBuilder().setBaseUri("http://dummy.restapiexample.com").build();
-
     }
-
-
-
-
 
 
 

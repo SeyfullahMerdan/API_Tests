@@ -53,4 +53,54 @@ public class DummyTestData {
 
 
 
+    //{
+    //    "name":"Ali Can",
+    //    "salary":"2000",
+    //    "age":"40"
+    //    }
+
+
+
+    public HashMap<String , Object> setUpRequestBody() {
+
+        HashMap<String , Object> requestBody=new HashMap<>();
+        requestBody.put("name","Ali Can");
+        requestBody.put("salary","2000");
+        requestBody.put("age","40");
+
+        return requestBody;
+    }
+
+
+
+    /*
+    {
+    "status": "success",
+    "data": {
+    "id":…
+},
+    "message": "Successfully! Record has been added."
+}
+     */
+
+
+    public HashMap<String, Object> setUpExpectedData(){
+
+        HashMap<String , Object> expectedData=new HashMap<>();
+
+        expectedData.put("statusCode", 200);
+        expectedData.put("status", "success");
+        expectedData.put("message", "Successfully! Record has been added.");
+
+        return expectedData;
+    }
+
+
+
+
+
+
+
+
+
 }
